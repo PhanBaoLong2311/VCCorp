@@ -1,0 +1,38 @@
+import java.io.*;
+
+public class TextFileExample {
+
+    public static void main(String[] args) {
+        String fileName = "textfile.txt";
+
+        writeTextFile(fileName);
+
+        readTextFile(fileName);
+    }
+
+    public static void writeTextFile(String fileName) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
+            writer.write("Hello, this is a text file example.\n");
+            writer.write("Line 2: Writing some more text.\n");
+            writer.write("Line 3: This is the third line.\n");
+
+            System.out.println("Successfully wrote to the text file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred while writing to the file.");
+            e.printStackTrace();
+        }
+    }
+
+    public static void readTextFile(String fileName) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
+            String line;
+            System.out.println("\nReading text file:");
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            System.out.println("An error occurred while reading the file.");
+            e.printStackTrace();
+        }
+    }
+}

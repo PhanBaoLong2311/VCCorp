@@ -1,0 +1,65 @@
+import java.io.*;
+
+class Car implements Serializable {
+    private String model;
+    private String color;
+    private int year;
+
+    public Car(String model, String color, int year) {
+        this.model = model;
+        this.color = color;
+        this.year = year;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "model='" + model + '\'' +
+                ", color='" + color + '\'' +
+                ", year=" + year +
+                '}';
+    }
+}
+
+public class BinaryFileExample {
+
+    public static void main(String[] args) {
+        String fileName = "binaryfile.dat";
+
+        writeBinaryFile(fileName);
+
+        readBinaryFile(fileName);
+    }
+
+    public static void writeBinaryFile(String fileName) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(fileName))) {
+            Car car1 = new Car("Toyota", "Red", 2020);
+            Car car2 = new Car("Tesla", "Blue", 2021);
+
+            oos.writeObject(car1);
+            oos.writeObject(car2);
+
+            System.out.println("Successfully wrote cars to the binary file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred while writing to the file.");
+            e.printStackTrace();
+        }
+    }
+
+    public static void readBinaryFile(String fileName) {
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(fileName))) {
+            System.out.println("\nReading binary file:");
+            while (true) {
+                try {
+                    Car car = (Car) ois.readObject();
+                    System.out.println(car);
+                } catch (EOFException e) {
+                    break; // Đọc hết file
+                }
+            }
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println("An error occurred while reading the file.");
+            e.printStackTrace();
+        }
+    }
+}
