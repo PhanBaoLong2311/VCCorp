@@ -1,3 +1,5 @@
+package xabd;
+
 public class ElectricEngine implements Engine {
     @Override
     public void start() {

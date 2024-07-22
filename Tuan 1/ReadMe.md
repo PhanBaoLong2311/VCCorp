@@ -49,7 +49,7 @@
 •Trừu tượng:
 -   EngineStart sử dụng trừu tượng để khởi động các động cơ mà không quan tâm đến loại động cơ cụ thể nào, chỉ cần nó triển khai interface Engine.
 
-![](Untitled.png.png)
+![](../Untitled.png)
 
 
 

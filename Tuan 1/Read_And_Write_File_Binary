@@ -13,18 +13,14 @@ class Car implements Serializable {
 
     @Override
     public String toString() {
-        return "Car{" +
-                "model='" + model + '\'' +
-                ", color='" + color + '\'' +
-                ", year=" + year +
-                '}';
+        return "Car{" + "model='" + model + '\'' + ", color='" + color + '\'' + ", year=" + year + '}';
     }
 }
 
-public class BinaryFileExample {
+public class BinaryFile {
 
     public static void main(String[] args) {
-        String fileName = "binaryfile.dat";
+        String fileName = "Read_And_Write_File_Binary.dat";
 
         writeBinaryFile(fileName);
 
@@ -39,26 +35,26 @@ public class BinaryFileExample {
             oos.writeObject(car1);
             oos.writeObject(car2);
 
-            System.out.println("Successfully wrote cars to the binary file.");
+            System.out.println("Ghi file về nhị phân thành công");
         } catch (IOException e) {
-            System.out.println("An error occurred while writing to the file.");
+            System.out.println("Gặp lỗi khi ghi file");
             e.printStackTrace();
         }
     }
 
     public static void readBinaryFile(String fileName) {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(fileName))) {
-            System.out.println("\nReading binary file:");
+            System.out.println("\nĐọc file: ");
             while (true) {
                 try {
                     Car car = (Car) ois.readObject();
                     System.out.println(car);
                 } catch (EOFException e) {
-                    break; // Đọc hết file
+                    break;
                 }
             }
         } catch (IOException | ClassNotFoundException e) {
-            System.out.println("An error occurred while reading the file.");
+            System.out.println("Gặp lỗi khi đọc file");
             e.printStackTrace();
         }
     }

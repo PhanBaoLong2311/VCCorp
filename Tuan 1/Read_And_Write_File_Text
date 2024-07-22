@@ -1,9 +1,9 @@
 import java.io.*;
 
-public class TextFileExample {
+public class TextFile{
 
     public static void main(String[] args) {
-        String fileName = "textfile.txt";
+        String fileName = "Read_And_Write_File_Text.txt";
 
         writeTextFile(fileName);
 
@@ -12,13 +12,13 @@ public class TextFileExample {
 
     public static void writeTextFile(String fileName) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
-            writer.write("Hello, this is a text file example.\n");
-            writer.write("Line 2: Writing some more text.\n");
-            writer.write("Line 3: This is the third line.\n");
+            writer.write("Text file đầu tiên\n");
+            writer.write("Text file thứ hai\n");
+            writer.write("Text file thứ ba\n");
 
-            System.out.println("Successfully wrote to the text file.");
+            System.out.println("Ghi file thành công");
         } catch (IOException e) {
-            System.out.println("An error occurred while writing to the file.");
+            System.out.println("Gặp lỗi trong quá trình ghi file");
             e.printStackTrace();
         }
     }
@@ -26,12 +26,12 @@ public class TextFileExample {
     public static void readTextFile(String fileName) {
         try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
             String line;
-            System.out.println("\nReading text file:");
+            System.out.println("\nĐang đọc file: ");
             while ((line = reader.readLine()) != null) {
                 System.out.println(line);
             }
         } catch (IOException e) {
-            System.out.println("An error occurred while reading the file.");
+            System.out.println("Gặp lỗi trong quá trình đọc file");
             e.printStackTrace();
         }
     }

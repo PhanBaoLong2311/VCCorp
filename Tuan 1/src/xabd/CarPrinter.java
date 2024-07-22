@@ -1,3 +1,5 @@
+package xabd;
+
 public class CarPrinter {
     public void printDetails(Car car) {
         System.out.println("Mẫu xe: " + car.getModel());

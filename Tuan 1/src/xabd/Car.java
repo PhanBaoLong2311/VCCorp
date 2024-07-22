@@ -1,8 +1,13 @@
+package xabd;
+
 public class Car {
     private String model;
-    private String color;
-    private int year;
+    protected String color;
+    int year;
 
+    static void display(){
+        System.out.println("abc");
+    }
     public Car(String model, String color, int year) {
         this.model = model;
         this.color = color;
@@ -40,4 +45,8 @@ public class Car {
     public void stopEngine() {
         System.out.println("Tắt động cơ");
     }
+
+
 }
+
+
