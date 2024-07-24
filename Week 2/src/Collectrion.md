@@ -48,7 +48,11 @@
 - E là Efficient Index-Based Access (truy cập dựa trên chỉ mục hiệu quả)
 - TS là Thread Safe (An toàn luồng)
 
-5.	Khái niệm Equals và HashCode:
+5. Giải thích:
+- Efficient Index-Based Access là phương pháp truy xuất dữ liệu từ một cấu trúc dữ liệu sử dụng chỉ mục để tìm kiếm và truy cập thông tin nhanh chóng hơn. Tuy nhiên HashMap, HashSet và ArrayList với cấu trúc dữ liệu của chúng đã cho phép tìm kiếm và truy cập thông tin với độ phức tạp O(1) nên không cần có truy cập dựa trên chỉ mục hiệu quả.  
+- Cả 3 cấu trúc dữ liệu trên không có an toàn luồng do chúng được thiết kế để tối ưu hóa hiệu suất trong các trường hợp đơn luồng. Việc nhiều luồng truy cập có thể dẫn tới những vấn đề như luồng đồng thời có thể thay đổi trạng thái của cấu trúc dữ liệu, race conditions. Có thể sử dụng từ khóa synchronized để bảo vệ các thao tác trên cấu trúc dữ liệu.
+
+6. Khái niệm Equals và HashCode:
 -	Equals và HashCode là 2 phương thức so sánh đối tượng và quản lý chúng trong các cấu trúc dữ liệu như HashMap và HashSet.
 -	Equals là phương thức xem 2 đối tượng có bằng nhau hay không. Nếu chúng bằng nhau theo equals thì được coi là tương đương (2 đối tượng tương đương không có nghĩa là chúng giống hệt nhau hoặc là một)
 -	HashCode trả về một số nguyên đại diện cho đối tượng, được sử dụng trong cấu trúc dữ liệu Hash Table để xác định vị trí của đối tượng.
