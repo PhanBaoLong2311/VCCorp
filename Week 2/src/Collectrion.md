@@ -9,8 +9,8 @@
 +get(Object key): Trả về giá trị tương ứng với key.  
 +remove(Object key): Xóa cặp key-value tương ứng với key.  
 +containsKey(Object key): Kiểm tra xem HashMap có chứa key hay không.  
-+size(): Trả về số lượng cặp key-value trong HashMap.
-
++size(): Trả về số lượng cặp key-value trong HashMap.  
+- Khi dùng lệnh put(K key, V value) vào trong HashMap, HashMap sẽ sử dụng phương thức HashCode() để tính ra giá trị băm của phần tử. Sau khi tính ra được, nếu tại vị trí đó không có phần tử nào, phần tử (K,V) đó sẽ được đưa vào; nếu đã có phần tử ở ví trị đó và bị trùng Key, phần tử đó sẽ bị thay thế giá trị ban đầu thành V của phần tử mới.
 2.	HashSet: Là một cấu trúc dữ liệu được sử dụng để lưu trữ các phần tử duy nhất, không cho phép phần tử trùng lặp.
 -	Không cho phép các phần tử trùng lặp. Nếu thêm một phần tử đã tồn tại trong HashSet, nó sẽ không thay đổi và không có phần tử trùng lặp nào được thêm vào.
 -	Các phần tử không duy trì thứ tự chèn vào. Thứ tự của các phần tử có thể thay đổi sau khi thêm hoặc xóa các phần tử khác.
