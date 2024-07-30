@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e802682e-739d-4537-a2f0-ee50960f9f7b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week 3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Concurrency.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Concurrency_2.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exception.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exception_Classes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Gson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Json.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lock.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ThreadPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ThreadPool.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ThreadTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/json.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vong-doi-cua-thread-trong-java.png" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2jfsyfnYF92fxfGgkAkDmZlTsj1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Gson.executor&quot;: &quot;Run&quot;,
+    &quot;Application.GsonExample.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Json.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ThreadPool.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ThreadTest.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.my-json-project [clean].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Thực tập kỹ thuật/VCCorp/VCCorp/Week 3&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/Thực tập kỹ thuật/VCCorp/VCCorp/Week 3/src/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
+  }
+}</component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Gson">
+    <configuration name="Gson" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Gson" />
+      <module name="Week 3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Json" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Json" />
+      <module name="Week 3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Gson" />
+        <item itemvalue="Application.Json" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e802682e-739d-4537-a2f0-ee50960f9f7b" name="Changes" comment="" />
+      <created>1721789723368</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1721789723368</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
