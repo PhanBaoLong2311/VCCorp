@@ -1,11 +1,11 @@
-import com.google.gson.Gson;
+/*import com.google.gson.Gson;
 
 class Person {
     private String name;
     private int age;
     private int mssv;
 
-    // Getters and Setters
+    // Getters Setters
     public String getName() {
         return name;
     }
@@ -29,14 +29,14 @@ class Person {
 
     @Override
     public String toString() {
-        return "Person{name='" + name + "', age=" + age + ", mssv='" + mssv + "'}";
+        return "Person{Name='" + name + "', Age=" + age + ", Mssv=" + mssv + "}";
     }
 }
 
-public class Gson {
+public class GsonExample {
     public static void main(String[] args) {
         // Chuỗi JSON
-        String jsonString = "{\"name\":\"Long\", \"age\":20, \"mssv\":20215417}";
+        String jsonString = "{\"Name\":\"Long\", \"Age\":20, \"Mssv\":20215417}";
 
         // Tạo đối tượng Gson
         Gson gson = new Gson();
@@ -48,3 +48,4 @@ public class Gson {
         System.out.println(person);
     }
 }
+*/
