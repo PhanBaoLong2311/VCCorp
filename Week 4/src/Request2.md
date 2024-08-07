@@ -27,6 +27,7 @@ Cải thiện: Chỉ lấy các cột cần thiết giúp giảm thiểu dữ li
 3. Sử dụng OR thay vì UNION
 - Câu lệnh không hiệu quả:
 ```java
+CREATE INDEX idx_lop ON hoc_sinh(lop);
 SELECT * FROM hoc_sinh WHERE lop = 'IT1' OR lop = 'IT2';
 ```
 
@@ -34,6 +35,7 @@ Vấn đề: OR có thể khiến MySQL không sử dụng chỉ mục hiệu qu
 
 - Câu lệnh tối ưu:
 ```java
+CREATE INDEX idx_lop ON hoc_sinh(lop);
 SELECT * FROM hoc_sinh WHERE lop = 'IT1'
 UNION
 SELECT * FROM hoc_sinh WHERE lop = 'IT2';
@@ -43,6 +45,7 @@ Cải thiện: Sử dụng UNION có thể giúp MySQL sử dụng chỉ mục t
 4. Truy vấn với LIKE không tối ưu
 - Câu lệnh ban đầu:
 ```java
+CREATE INDEX idx_lop ON hoc_sinh(ten);
 SELECT * FROM hoc_sinh WHERE ten LIKE '%Long%';
 ```
 
@@ -50,22 +53,25 @@ Vấn đề: Sử dụng ký tự % ở đầu khiến MySQL không thể sử d
 
 - Câu lệnh tối ưu:
 ```java
+CREATE INDEX idx_lop ON hoc_sinh(ten);
 ALTER TABLE hoc_sinh ADD FULLTEXT(ten);
 SELECT * FROM hoc_sinh WHERE MATCH(ten) AGAINST('Long');
 ```
-Cải thiện: Chỉ mục FULLTEXT giúp tìm kiếm văn bản hiệu quả hơn nhiều so với LIKE.
+Cải thiện: Chỉ mục FULLTEXT giúp tìm kiếm văn bản hiệu quả hơn nhiều so với LIKE.  
 5. Sử dụng hàm trong WHERE
 - Câu lệnh chưa tốt:
 ```java
+CREATE INDEX idx_lop ON hoc_sinh(ngay_sinh);
 SELECT * FROM hoc_sinh WHERE YEAR(ngay_sinh) = 2003;
 ```
 Vấn đề: Sử dụng hàm trên cột làm mất khả năng sử dụng chỉ mục, dẫn đến quét bảng.
 
 - Câu lệnh tối ưu:
 ```java
+CREATE INDEX idx_lop ON hoc_sinh(ngay_sinh);
 SELECT * FROM hoc_sinh WHERE ngay_sinh BETWEEN '2005-01-01' AND '2005-12-31';
 ```
-Cải thiện: Sử dụng khoảng giá trị giúp MySQL sử dụng chỉ mục tốt hơn.
+Cải thiện: Sử dụng khoảng giá trị giúp MySQL sử dụng chỉ mục tốt hơn.  
 6. Sử dụng DISTINCT không cần thiết
 - Câu lệnh chưa tối ưu:
 ```java
@@ -77,7 +83,7 @@ Vấn đề: DISTINCT tốn tài nguyên để loại bỏ các bản ghi trùng
 ```java
 SELECT ho, ten FROM hoc_sinh;
 ```
-Cải thiện: Loại bỏ DISTINCT nếu chắc chắn không có bản ghi trùng lặp.
+Cải thiện: Loại bỏ DISTINCT nếu chắc chắn không có bản ghi trùng lặp.  
 
 7. Sử dụng IN thay vì EXISTS
 - Query chưa tối ưu:
@@ -91,7 +97,7 @@ Vấn đề: IN có thể kém hiệu quả hơn EXISTS khi làm việc với c�
 ```java
 SELECT * FROM hoc_sinh WHERE EXISTS (SELECT 1 FROM hoc_sinh WHERE tuoi > 16);
 ```
-Cải thiện: EXISTS có thể nhanh hơn vì nó ngừng tìm kiếm khi tìm thấy kết quả khớp đầu tiên.
+Cải thiện: EXISTS có thể nhanh hơn vì nó ngừng tìm kiếm khi tìm thấy kết quả khớp đầu tiên.  
 
 8. Sử dụng UNION thay vì UNION ALL
 - Query chưa tối ưu:
@@ -108,7 +114,7 @@ SELECT ho, ten FROM hoc_sinh WHERE lop = 'IT1'
 UNION ALL
 SELECT ho, ten FROM hoc_sinh WHERE lop = 'IT2';
 ```
-Cải thiện: UNION ALL không loại bỏ các bản ghi trùng lặp, tiết kiệm tài nguyên.
+Cải thiện: UNION ALL không loại bỏ các bản ghi trùng lặp, tiết kiệm tài nguyên.  
 
 9. Sử dụng ORDER BY RAND()
 - Câu lệnh chưa tốt:
@@ -121,7 +127,7 @@ Vấn đề: ORDER BY RAND() tính toán lại giá trị ngẫu nhiên cho mỗ
 ```java
 SELECT * FROM hoc_sinh WHERE id >= (SELECT FLOOR(RAND() * (SELECT MAX(id) FROM hoc_sinh))) LIMIT 10;
 ```
-Cải thiện: Sử dụng cách khác để chọn ngẫu nhiên các hàng, giảm tải cho máy chủ.
+Cải thiện: Sử dụng cách khác để chọn ngẫu nhiên các hàng, giảm tải cho máy chủ.  
 
 10. Sử dụng JOIN không tối ưu
 - Câu lệnh ban đầu:
