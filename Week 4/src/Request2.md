@@ -11,7 +11,7 @@ Nếu cột lop không có chỉ mục, MySQL phải thực hiện quét toàn b
 CREATE INDEX idx_lop ON hoc_sinh(lop);
 SELECT * FROM hoc_sinh WHERE lop = 'IT1';
 ```
-Cải thiện: Tạo chỉ mục trên cột lop giúp MySQL tìm kiếm nhanh hơn mà không cần quét toàn bộ bảng.
+Cải thiện: Tạo chỉ mục trên cột lop giúp MySQL tìm kiếm nhanh hơn mà không cần quét toàn bộ bảng.  
 2. Sử dụng SELECT *
 - Query không tối ưu:
 ```java
@@ -23,7 +23,7 @@ Vấn đề: Sử dụng SELECT * lấy tất cả các cột dù không cần t
 ```java
 SELECT ho, ten, tuoi FROM hoc_sinh WHERE tuoi > 16;
 ```
-Cải thiện: Chỉ lấy các cột cần thiết giúp giảm thiểu dữ liệu truyền tải và cải thiện hiệu suất.
+Cải thiện: Chỉ lấy các cột cần thiết giúp giảm thiểu dữ liệu truyền tải và cải thiện hiệu suất.  
 3. Sử dụng OR thay vì UNION
 - Câu lệnh không hiệu quả:
 ```java
